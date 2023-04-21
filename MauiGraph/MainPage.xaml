@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:MauiGraph"
+             x:DataType="drawable:Drawable"
+             WidthRequest="1600"
+             BackgroundColor="WhiteSmoke"
+             x:Class="MauiGraph.MainPage"
+             Title="Graph Page">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <drawable:Drawable x:Key="drawable" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <GraphicsView x:Name="MyGraphicsView" Drawable="{StaticResource drawable}" 
+                StartInteraction="GraphicsView_StartInteraction"
+                StartHoverInteraction="MyGraphicsView_StartHoverInteraction"
+                MoveHoverInteraction="MyGraphicsView_MoveHoverInteraction" >
+        
+    </GraphicsView>
+
+
+
+
+
+
+</ContentPage>
