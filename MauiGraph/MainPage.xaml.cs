@@ -1,25 +1,17 @@
-﻿namespace MauiGraph;
+﻿using System.Diagnostics;
+
+namespace MauiGraph;
 
 public partial class MainPage : ContentPage
 {
 	public MainPage()
 	{
-		InitializeComponent();
+		InitializeComponent();    
 	}
 
-    private void MyGraphicsView_MoveHoverInteraction(object sender, TouchEventArgs e)
+    private void PointerGestureRecognizer_PointerMoved(object sender, PointerEventArgs e)
     {
-        
-    }
-
-    private void GraphicsView_StartInteraction(object sender, TouchEventArgs e)
-    {
-        
-    }
-
-    private void MyGraphicsView_StartHoverInteraction(object sender, TouchEventArgs e)
-    {
-       
+        lblCoordinates.Text = e.GetPosition(MyGraphicsView).Value.ToString();       
     }
 }
 

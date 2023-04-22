@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGraph.RadioButtonTest"
+             Title="RadioButtonTest">
+    <StackLayout>
+        <StackLayout>
+        <Label Text="What's your favorite animal?" />
+        <RadioButton GroupName="animal" Content="Cat" />
+        <RadioButton GroupName="animal" Content="Dog" />
+        <RadioButton GroupName="animal" Content="Elephant" />
+        <RadioButton GroupName="animal" Content="Monkey"
+        IsChecked="true" />
+        <RadioButtonGroup.SelectedValue>
+            <RadioButton x:Name="Selected1Radio" Content="Monkey" Value="Monkey" />
+        </RadioButtonGroup.SelectedValue>
+    </StackLayout>    <StackLayout>        <Label Text="What's your favorite color?" />
+        <RadioButton GroupName="colors" Content="Red" />
+        <RadioButton GroupName="colors" Value="Green" Content="Green" />
+        <RadioButton GroupName="colors" Value="Blue" Content="Blue" IsChecked="True" />
+        <RadioButton GroupName="colors" Content="Other" />
+        <RadioButtonGroup.SelectedValue>
+            <RadioButton x:Name="SelectedRadio2" Content="Blue" Value="Blue" />
+        </RadioButtonGroup.SelectedValue>    </StackLayout>    </StackLayout>
+</ContentPage>

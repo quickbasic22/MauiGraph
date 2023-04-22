@@ -53,8 +53,7 @@ namespace MauiGraph
                 canvas.DrawLine(x, y, x + 0.1f, (x + 0.1f) * (x + 0.1f) * (x + 0.1f));
             }
 
-
-
+           
 
             //canvas.StrokeColor = Colors.DarkRed;
             //canvas.StrokeSize = 6;

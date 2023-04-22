@@ -6,7 +6,15 @@
     xmlns:local="clr-namespace:MauiGraph"
     Shell.FlyoutBehavior="Flyout"
     Title="Shell Flyout Page">
-    
+
+    <ShellContent
+        Title="PointerMover"
+        ContentTemplate="{DataTemplate local:PointerMover}"
+        Route="PointerMover" />
+    <ShellContent
+        Title="RadioButtonTest"
+        ContentTemplate="{DataTemplate local:RadioButtonTest}"
+        Route="RadioButtonTest" />
     <ShellContent
         Title="MyShapes"
         ContentTemplate="{DataTemplate local:MyShapes}"

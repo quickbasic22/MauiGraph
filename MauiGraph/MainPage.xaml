@@ -14,17 +14,13 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-
-    <GraphicsView x:Name="MyGraphicsView" Drawable="{StaticResource drawable}" 
-                StartInteraction="GraphicsView_StartInteraction"
-                StartHoverInteraction="MyGraphicsView_StartHoverInteraction"
-                MoveHoverInteraction="MyGraphicsView_MoveHoverInteraction" >
-        
-    </GraphicsView>
-
-
-
-
-
-
+    <VerticalStackLayout>
+        <GraphicsView x:Name="MyGraphicsView" Drawable="{StaticResource drawable}">
+            <GraphicsView.GestureRecognizers>
+                <PointerGestureRecognizer PointerMoved="PointerGestureRecognizer_PointerMoved" />
+            </GraphicsView.GestureRecognizers>
+        </GraphicsView>
+        <Label x:Name="lblCoordinates" Text="Dotnet Maui" TextColor="Black" HorizontalOptions="Center" FontSize="Large" />
+    </VerticalStackLayout>
 </ContentPage>
+ 
