@@ -56,6 +56,9 @@
 	  <MauiXaml Update="GraphicsTest.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MyCircleShape.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MyShapes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

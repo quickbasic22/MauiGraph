@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="fuchsia"
+             x:Class="MauiGraph.MyCircleShape"
+             Title="MyCircleShape">
+    <VerticalStackLayout>
+        <Ellipse Stroke="Red"
+                 Fill="Blue"
+                StrokeThickness="14"
+                WidthRequest="150"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+
+        <Path Stroke="Blue"
+              StrokeThickness="8"
+                Aspect="Uniform"
+                HorizontalOptions="Center">
+            <Path.Data>
+                <GeometryGroup FillRule="Nonzero">
+                    <EllipseGeometry RadiusX="200"
+                RadiusY="250"
+                Center="150, 150" />
+                    <EllipseGeometry RadiusX="200"
+                RadiusY="250"
+                Center="150, 150" />
+                    <EllipseGeometry RadiusX="200"
+                RadiusY="250"
+                Center="150, 150" />
+                    <EllipseGeometry RadiusX="200"
+                RadiusY="120"
+                Center="150, 150" />
+                </GeometryGroup>
+            </Path.Data>
+        </Path>        <Path Stroke="Fuchsia"
+              StrokeThickness="22">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection>
+                            <PathFigure StartPoint="10,10">
+                                <PathFigure.Segments>
+                                    <PathSegmentCollection>
+                                        <BezierSegment Point1="100,0"
+                                                Point2="200,200"
+                                                Point3="300,10" />  
+                                    </PathSegmentCollection>
+                                </PathFigure.Segments>
+                            </PathFigure>
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </VerticalStackLayout>
+</ContentPage>

@@ -8,6 +8,10 @@
     Title="Shell Flyout Page">
 
     <ShellContent
+        Title="MyCircleShape"
+        ContentTemplate="{DataTemplate local:MyCircleShape}"
+        Route="MyCircleShape" />
+    <ShellContent
         Title="PointerMover"
         ContentTemplate="{DataTemplate local:PointerMover}"
         Route="PointerMover" />
