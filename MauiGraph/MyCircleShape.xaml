@@ -4,53 +4,27 @@
              BackgroundColor="fuchsia"
              x:Class="MauiGraph.MyCircleShape"
              Title="MyCircleShape">
+    
+    
     <VerticalStackLayout>
-        <Ellipse Stroke="Red"
-                 Fill="Blue"
-                StrokeThickness="14"
-                WidthRequest="150"
-                HeightRequest="150"
-                HorizontalOptions="Center" />
+        <Grid Width="600" Height="600">
+            <Path Stroke="Red" StrokeThickness="2">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="300,450">
+                            <PathFigure.Segments>
+                                <PathSegmentCollection>
+                                    <BezierSegment Point1="210,300" Point2="120,420" Point3="300,570"/>
+                                    <BezierSegment Point1="480,420" Point2="390,300" Point3="300,450"/>
+                                    <LineSegment Point="300,450"/>
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Grid>
 
-        <Path Stroke="Blue"
-              StrokeThickness="8"
-                Aspect="Uniform"
-                HorizontalOptions="Center">
-            <Path.Data>
-                <GeometryGroup FillRule="Nonzero">
-                    <EllipseGeometry RadiusX="200"
-                RadiusY="250"
-                Center="150, 150" />
-                    <EllipseGeometry RadiusX="200"
-                RadiusY="250"
-                Center="150, 150" />
-                    <EllipseGeometry RadiusX="200"
-                RadiusY="250"
-                Center="150, 150" />
-                    <EllipseGeometry RadiusX="200"
-                RadiusY="120"
-                Center="150, 150" />
-                </GeometryGroup>
-            </Path.Data>
-        </Path>        <Path Stroke="Fuchsia"
-              StrokeThickness="22">
-            <Path.Data>
-                <PathGeometry>
-                    <PathGeometry.Figures>
-                        <PathFigureCollection>
-                            <PathFigure StartPoint="10,10">
-                                <PathFigure.Segments>
-                                    <PathSegmentCollection>
-                                        <BezierSegment Point1="100,0"
-                                                Point2="200,200"
-                                                Point3="300,10" />  
-                                    </PathSegmentCollection>
-                                </PathFigure.Segments>
-                            </PathFigure>
-                        </PathFigureCollection>
-                    </PathGeometry.Figures>
-                </PathGeometry>
-            </Path.Data>
-        </Path>
+
     </VerticalStackLayout>
 </ContentPage>

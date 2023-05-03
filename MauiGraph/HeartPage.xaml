@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:MauiGraph"
+             x:Class="MauiGraph.HeartPage"
+             Title="HeartPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <drawable:DrawableHeart x:Key="idrawable" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+        <AbsoluteLayout x:Name="MyGrid">
+            <AbsoluteLayout.GestureRecognizers>
+                <PointerGestureRecognizer PointerMoved="PointerGestureRecognizer_PointerMoved" />
+            </AbsoluteLayout.GestureRecognizers>
+            <Label x:Name="Label1" Text="Hello World" FontSize="Large" TextColor="Red" />
+            <Path Stroke="Red" StrokeThickness="2">
+                <Path.TranslationX>
+                    <x:Double>700</x:Double>
+                </Path.TranslationX>
+                <Path.TranslationY>
+                    <x:Double>25</x:Double>
+                </Path.TranslationY>
+                <Path.Scale>
+                    <x:Double>6</x:Double>
+                </Path.Scale>
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="100,150">
+                            <PathFigure.Segments>
+                                <PathSegmentCollection>
+                                    <BezierSegment Point1="70,50" Point2="40,120" Point3="100,200"/>
+                                    <BezierSegment Point1="160,120" Point2="130,50" Point3="100,150"/>
+                                    <LineSegment Point="100,150"/>
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Rectangle Stroke="Red"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="70, 50" />
+            <Rectangle Stroke="Red"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="40, 120" />
+            <Rectangle Stroke="Red"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="100, 200" />
+            <Rectangle Stroke="Red"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="160, 120" />
+            <Rectangle Stroke="Red"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="130, 50" />
+            <Rectangle Stroke="Red"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="100, 150" />
+        </AbsoluteLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

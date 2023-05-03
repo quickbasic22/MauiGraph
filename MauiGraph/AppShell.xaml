@@ -8,6 +8,10 @@
     Title="Shell Flyout Page">
 
     <ShellContent
+        Title="Heart Page"
+        ContentTemplate="{DataTemplate local:HeartPage}"
+        Route="HeartPage" />
+    <ShellContent
         Title="MyCircleShape"
         ContentTemplate="{DataTemplate local:MyCircleShape}"
         Route="MyCircleShape" />
