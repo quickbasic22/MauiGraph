@@ -17,26 +17,34 @@
             <AbsoluteLayout.GestureRecognizers>
                 <PointerGestureRecognizer PointerMoved="PointerGestureRecognizer_PointerMoved" />
             </AbsoluteLayout.GestureRecognizers>
-            <Label x:Name="Label1" Text="Hello World" FontSize="Large" TextColor="Red" />
-
-            <Path x:Name="MyPath" Stroke="Red" StrokeThickness="2">
-                <Path.TranslationX>
-                    <x:Double>700</x:Double>
-                </Path.TranslationX>
-                <Path.TranslationY>
-                    <x:Double>25</x:Double>
-                </Path.TranslationY>
-                <Path.Scale>
-                    <x:Double>6</x:Double>
-                </Path.Scale>
+            
+            <Button x:Name="MyButton" Text="Transoform" Clicked="MyButton_Clicked" />
+             <Label x:Name="Label1" Text="Hello World" FontSize="Large" TextColor="Red" />
+            
+            <Path x:Name="MyPath" Stroke="Red" StrokeThickness="2" Fill="Red">
                 <Path.Data>
                     <PathGeometry>
-                        <PathFigure x:Name="MyPathFigure" StartPoint="100,150">
+                        <PathFigure x:Name="MyPathFigure" StartPoint="800, 200">
                             <PathFigure.Segments>
                                 <PathSegmentCollection x:Name="pathsegmentcollection">
-                                    <BezierSegment x:Name="bezier1" Point1="70,50" Point2="40,120" Point3="100,200"/>
-                                    <BezierSegment x:Name="bezier2" Point1="160,120" Point2="130,50" Point3="100,150"/>
-                                    <LineSegment x:Name="line1" Point="100,150"/>
+                                    <BezierSegment x:Name="bezier1" Point1="620, 0" Point2="440, 220" Point3="800, 700"/>
+                                    <BezierSegment x:Name="bezier2" Point1="1160, 220" Point2="980, 0" Point3="800, 200"/>
+                                    <LineSegment x:Name="line1" Point="800, 200"/>
+                                </PathSegmentCollection>
+                            </PathFigure.Segments>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Path x:Name="MyPath2" Stroke="Red" StrokeThickness="2" Fill="Blue">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="799.3, 378.3">
+                            <PathFigure.Segments>
+                                <PathSegmentCollection>
+                                    <BezierSegment Point1="769.3, 345" Point2="736, 381.7" Point3="799.3, 461.7"/>
+                                    <BezierSegment Point1="859.3, 381.7" Point2="829.3, 345" Point3="799.3, 378.3"/>
+                                    <LineSegment Point="799.3, 378.3"/>
                                 </PathSegmentCollection>
                             </PathFigure.Segments>
                         </PathFigure>
@@ -48,32 +56,70 @@
             Fill="DarkBlue"
             StrokeThickness="4"
             HeightRequest="10"
-            WidthRequest="10" AbsoluteLayout.LayoutBounds="70, 50" />
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="800, 400" />
             <Rectangle Stroke="Red"
             Fill="DarkBlue"
             StrokeThickness="4"
             HeightRequest="10"
-            WidthRequest="10" AbsoluteLayout.LayoutBounds="40, 120" />
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="620, 0" />
             <Rectangle Stroke="Red"
             Fill="DarkBlue"
             StrokeThickness="4"
             HeightRequest="10"
-            WidthRequest="10" AbsoluteLayout.LayoutBounds="100, 200" />
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="440, 220" />
             <Rectangle Stroke="Red"
             Fill="DarkBlue"
             StrokeThickness="4"
             HeightRequest="10"
-            WidthRequest="10" AbsoluteLayout.LayoutBounds="160, 120" />
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="800, 700" />
             <Rectangle Stroke="Red"
             Fill="DarkBlue"
             StrokeThickness="4"
             HeightRequest="10"
-            WidthRequest="10" AbsoluteLayout.LayoutBounds="130, 50" />
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="1160, 220" />
             <Rectangle Stroke="Red"
             Fill="DarkBlue"
             StrokeThickness="4"
             HeightRequest="10"
-            WidthRequest="10" AbsoluteLayout.LayoutBounds="100, 150" />
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="980, 0" />
+
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="799.3, 378.3" />
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="769.3, 345" />
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="736, 381.7" />
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="799.3, 461.7" />
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="859.3, 381.7" />
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="829.3, 345" />
+            <Rectangle Stroke="Blue"
+            Fill="DarkBlue"
+            StrokeThickness="4"
+            HeightRequest="10"
+            WidthRequest="10" AbsoluteLayout.LayoutBounds="799.3, 378.3" />
+            
+            
         </AbsoluteLayout>
 
     </VerticalStackLayout>
